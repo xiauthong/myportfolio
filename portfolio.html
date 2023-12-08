@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/722e303770.js" crossorigin="anonymous"></script>
+
+    <title>My Portfolio</title>
+  </head>
+   <style>
+
+    body{
+        background-color: #494949;
+    }
+
+    header{
+        height: 100px;
+        background-color: black;
+        width: 100%;
+        position: fixed;
+
+    }
+
+    .container,.container1{
+        display: flex;
+    }
+
+    .sidenav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: yellow;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover{
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .renee{
+        font-size: 70px;
+        margin-left: 950px;
+        margin-top: 25px;
+        font-weight: bold;
+        color: yellow;
+    }
+
+    .background{
+        background-image:url("./close-up-image-programer-working-his-desk-office.jpg");
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        height: 600px;
+        width: 100%;
+     
+
+    }
+
+    .background h1{
+        padding-left: 250px;
+        font-size: 100px;
+        padding-top: 200px;
+        font-weight: bolder;
+        color:yellow;
+      
+    }
+
+    .background h2{
+        font-size: 50px;
+        padding-left: 27px;
+        padding-top: 20px;
+        font-weight: bolder;
+        color:yellow;
+        background-color: rgb(0, 0, 0);
+        width: 650px;
+        height: 100px;
+        margin-left: 380px;
+      
+    }
+
+    .yellowrect{
+        width: 100%;
+        height: 100px;
+        background-color: yellow;
+        color: grey;
+      
+        
+    }
+
+    .yellowrect h1{
+        margin-left: 550px;
+        font-size: 70px;
+        font-weight: bolder;
+        color: black;
+        padding-top: 10px;
+    }
+
+    .aboutus{
+        width: 50%;
+        height: 500px;
+        margin-left: 90px;
+        margin-top: 60px;
+
+    }
+
+    .aboutus p{
+        color: yellow;
+        font-size: 20px;
+    }
+
+    .me{
+        margin-left: 60px;
+        margin-top: 30px;
+    }
+
+    .me img{
+        width: 400px;
+        height: 500px;
+    }
+
+    .skill{
+       
+        background-color: #ddd;
+        height: 50px;
+        margin-top: 30px;
+        width: 90%;
+        margin-left: 50px;
+        margin-bottom: 50px;
+      
+    }
+
+    .skilltext{
+        margin-left: 50px;
+    }
+
+    .skilltext h3{
+        margin-left: 50px;
+        margin-top: 50px;
+        color: #ddd;
+    }
+
+    .html,.css{
+        width: 90%;
+        height: 50px;
+        background-color: black;
+    }
+
+    .javascript{
+        width: 50%;
+        height: 50px;
+        background-color: black;
+    }
+
+
+    .php{
+        width: 45%;
+        height: 50px;
+        background-color: black;
+    }
+
+    .uni,.seconaryschool{
+        margin-left: 130px;
+        margin-top: 80px;
+        width: 500px;
+        height: 300px;
+        background-color: white;
+        padding-left: 20px;
+        padding-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        margin-bottom: 60px;
+    }
+
+    .uni:hover{
+        -ms-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    .seconaryschool:hover{
+        -ms-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    .background1{
+        background-image:url("./online-web-design.jpg");
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        height: 600px;
+        width: 100%;
+     
+
+    }
+
+    .projectbox{
+        margin-left: 40px;
+        margin-top: 50px;
+        width: 400px;
+        height: 380px;
+        background-color: white;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        text-align: center;
+    }
+
+    .projectbox:hover{
+        -ms-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+
+    }
+
+    .projectbox h2{
+        margin-top: 17px;
+    
+        text-decoration: underline;
+        color: black;
+        font-size: 20px;
+    }
+
+    .projectbox i{
+        font-size: 70px;
+        margin-top: 10px;
+    }
+
+    .projectbox p{
+        font-size: 13px;
+        color: black;
+        margin-top: 20px;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    #button{
+    
+        color:black;
+        margin-top: 20px;
+        
+ 
+    }
+
+    .background2{
+        background-image:url("./html-system-website-concept.jpg");
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        height: 600px;
+        width: 100%;
+     
+
+    }
+
+    .box{
+        margin-left: 100px;
+        margin-top: 50px;
+        height: 50px;
+        width: 85%;
+        border: rgb(200, 197, 197) 2px solid;
+    }
+
+
+    textarea {
+        width: 85%;
+        margin-left: 100px;
+        margin-top: 50px;
+        height: 150px;
+        border: rgb(200, 197, 197) 2px solid;
+    }
+
+    .btn{
+        width: 200px;
+        height: 50px;
+        background-color: white;
+        color: black;
+        margin-top: 20px;
+        margin-left: 100px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: black 2px solid;
+    }
+
+    .btn:hover{
+        color: white;
+        background-color: gray;
+    }
+
+    footer{
+        width: 100%;
+        height: 120px;
+        background-color: rgb(241, 237, 237);
+        margin-top: 600px;
+        text-align: center;
+    }
+
+
+    .circle{
+        margin-left: 450px;
+    }
+
+
+
+    .circle1{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: 1px solid black;
+        background-color: rgb(241, 237, 237) ;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    .circle i{
+        font-size: 40px;
+        margin-top: 20px;
+        color: #000000;
+    }
+
+      /*mobile size*/
+      @media screen and (max-width:600px) {
+
+        header{
+            width: 100%;
+        }
+
+        .renee{
+        font-size: 40px;
+        margin-left: 310px;
+
+   
+    }
+
+    .background h1{
+        padding-left:70px;
+        font-size: 41px;
+        padding-top: 240px;
+      
+    }
+
+    .background h2{
+        font-size: 35px;
+        padding-left: 15px;
+        padding-top: 10px;
+        width: 450px;
+        height: 60px;
+        margin-left: 20px;
+      
+    }
+
+    .yellowrect{
+        width: 100%;
+        text-align: center;
+  
+    
+    }
+
+    .yellowrect h1{
+        font-size: 40px;
+        margin-left: 70px;
+        padding-top: 20px;
+
+      
+    }
+
+    .container1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutus{
+        width: 85%;
+        margin-left: 40px;
+        margin-top: 60px;
+
+    }
+
+    .aboutus p{
+        font-size: 15px;
+    }
+
+    .me{
+        margin-left: 100px;
+        margin-bottom: 50px;
+        margin-top: -50px;
+    }
+
+    .me img{
+        width: 300px;
+        height: 400px;
+        border-radius: 60px;
+    }
+
+
+    .skill{
+       
+  
+       width: 100%;
+       margin-left: -20px;
+     
+     
+   }
+
+   .skilltext h3{
+        margin-left: -20px;
+    
+
+    }
+
+    .uni,.seconaryschool{
+        margin-left: 48px;
+        margin-top: 50px;
+        width: 400px;
+        height: 300px;
+    }
+
+    .background1{
+        height: 1360px;
+
+     
+
+    }
+
+    .projectbox{
+        margin-left: 50px;
+     
+    }
+
+    .box{
+    
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    textarea {
+        width: 90%;
+        margin-left: 10px;
+        
+    }
+
+    .btn{
+       
+        margin-left: 50px;
+       
+    }
+
+    footer{
+        width: 100%;
+  
+        margin-top: 570px;
+
+    }
+
+    .circle{
+        margin-left: 0px;
+    }
+
+
+
+
+
+    }
+
+    /*Tablet size*/
+    @media screen and (min-width:600px) and (max-width:800px){
+
+        header{
+            width: 100%;
+         
+        }
+
+
+        .renee{
+        font-size: 40px;
+        margin-left: 530px;
+
+        }
+
+        .background h1{
+        padding-left:71px;
+        font-size: 70px;
+        padding-top: 240px;
+      
+    }
+
+    .background h2{
+        font-size: 35px;
+        padding-left: 15px;
+        padding-top: 10px;
+        width: 450px;
+        height: 60px;
+        margin-left: 170px;
+      
+    }
+
+    .yellowrect{
+        width: 100%;
+        text-align: center;
+  
+    
+    }
+
+    .yellowrect h1{
+        font-size: 40px;
+        margin-left: 70px;
+        padding-top: 20px;
+
+      
+    }
+
+
+    .aboutus{
+        width: 50%;
+        margin-left: 20px;
+        height: 550px;
+   
+
+    }
+
+    .aboutus p{
+        font-size: 16px;
+    }
+
+     .me{
+        margin-left: 40px;
+        margin-top: 90px;
+        width: 50%;
+      
+    }
+
+    .me img{
+        width: 300px;
+        height: 400px;
+       
+    }
+
+    .skill{
+       
+  
+   
+       margin-left: 20px;
+     
+     
+   }
+
+   .skilltext h3{
+        margin-left: 20px;
+    
+
+    }
+
+    .uni,.seconaryschool{
+        margin-left: 30px;
+        width: 350px;
+       
+    }
+
+    .projectbox{
+        height: 450px;
+        margin-left: 5px;
+        width: 300px;
+        border-radius: 0;
+     
+    }
+
+    .box{
+    
+   
+    margin-left: 10px;
+}
+
+textarea {
+ 
+    margin-left: 10px;
+    
+}
+
+.btn{
+       
+       margin-left: 50px;
+      
+   }
+
+
+   footer{
+        width: 100%;
+  
+        margin-top: 570px;
+
+    }
+
+    .circle{
+        margin-left: 130px;
+    }
+
+    .circle1{
+    
+        background-color: black;
+ 
+    }
+
+    .circle i{
+     
+        color: white;
+    }
+
+
+
+
+
+    
+
+
+    
+
+
+        
+
+
+
+    }
+
+
+   </style>
+  <body>
+
+    <header>
+        <div class="container">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#project">Project</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <span style="font-size:60px; color: yellow;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+            <div class="renee">
+                <h1>RENEE</h1>
+            </div>
+        </div>
+
+
+    </header>
+
+    <section class="home" id="home">
+
+
+        <div class="background">
+            <h1>CHAN XIAU THONG</h1>
+            <h2>Front-End Web Developer</h2>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <div class="yellowrect">
+            <h1>About Me</h1>
+        </div>
+        
+        <div class="container1">
+            <div class="aboutus">
+               <p>My name is Chan Xiau Thong, and I am study in New Era University College majoring in Diploma in E-commerce. As part of my academic journey, I will be going for an internship next year from February to May. During this period, I am currently seeking opportunities in the role of a front-end developer. </p>
+               <p>I am passionate about creating website. With a deep knowledge of front-end technologies, I work to transform design concepts into responsive, interactive and accessible web experiences. And I am particularly enthusiastic about applying my knowledge in real-world scenarios.</p>
+               <p>Whether it's optimizing user interfaces, improving site performance, or implementing the latest design trends, I am committed to excellence in all aspects of front-end development. I am eager to contribute to the company and learn from industry professionals.</p>
+            </div>
+
+            <div class="me">
+                <img src="./portfolia.jpg">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="yellowrect">
+            <h1>Skills</h1>
+        </div>
+        
+    <div class="skilltext">
+        <h3>HTML</h3>
+        <div class="skill">
+            <div class="html"></div>
+        </div>
+    </div>
+
+    <div class="skilltext">
+        <h3>CSS</h3>
+        <div class="skill">
+            <div class="css"></div>
+        </div>
+    </div>
+
+    <div class="skilltext">
+        <h3>Java Script</h3>
+        <div class="skill">
+            <div class="javascript"></div>
+        </div>
+    </div>
+
+    <div class="skilltext">
+        <h3>PHP</h3>
+        <div class="skill">
+            <div class="php"></div>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="education" id="education">
+        <div class="yellowrect">
+            <h1>Education</h1>
+        </div>
+
+        <div class="container1">
+            <div class="uni">
+                <h4>New Era University College</h4>
+                <p>Diploma in E-commerce<br>GPA: 3.52<br>CGPA: 3.45</p>
+                <p>Course: Java, Database, Web Design,<br>
+                    E-commerce, Web Programming,<br>
+                    Computer Graphics Design and etc</p>
+                <p>July 2022 - Sept 2024 (current)</p>
+            </div>
+
+            
+
+            <div class="seconaryschool">
+                <h4>Pin Hwa High School</h4>
+                <p>UEC: 3A 1B 3C</p>
+                <p>Jan 2014 - Nov 2019</p>
+            </div>  
+
+        </div>
+    </section>
+
+    <section class="project" id="project">
+
+        <div class="yellowrect">
+            <h1>Project</h1>
+        </div>
+        <div class="background1">
+            <div class="container1">
+                <div class="projectbox">
+                    <h2>Personal Portfolio</h2>
+                    <i class="fa-regular fa-file" style="color: #000000;"></i>
+                    <p>Built my personal portfolio website to introduce myself professionally and showcase my experience.</p>
+                    <p>HTML, CSS, and JavaScript to build the foundation of my portfolio. </p>
+                    <p>The design focused on simplicity, ensuring a user-friendly experience.</p>
+                    <a href="#" class="button" id="button">Click To View More</a>
+                </div>
+
+                <div class="projectbox">
+                    <h2>Travel Website</h2>
+                    <i class="fa-solid fa-earth-europe" style="color: #000000;"></i>
+                    <p>Japan travel website to discover Japan destinations by captivating visuals and detail information.</p>
+                    <p>Create an attractive and user-friendly website using HTML, CSS, and JavaScript.</p>
+                    <p>Ensures an engaging and responsive experience for all visitors.</p>
+                    <a href="https://github.com/xiauthong/japan-travel" class="button" id="button">Click To View More</a>
+                </div>
+
+                <div class="projectbox">
+                    <h2> Food Blog</h2>
+                    <i class="fa-solid fa-burger" style="color: #000000;"></i>
+                    <p>A simple food blog website to let user enjoy a delightful experience.</p>
+                    <p>Using HTML, CSS, and JavaScript for a visually pleasing and easy-to-navigate experience.</p>
+                    <p>Responsive web design to ensure the site works well on all devices and screen sizes.</p>
+                    <a href="https://github.com/xiauthong/foodblog" class="button" id="button">Click To View More</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <div class="yellowrect">
+            <h1>Contact</h1>
+            <div class="background2">
+                <form>
+                    <input type="text" placeholder="Name" class="box" required>
+                    <input type="number" placeholder="Phone" class="box" required>
+                    <input type="email" placeholder="Email" class="box" required>
+                    <textarea name="message" class="message" placeholder="Message" required></textarea>
+                    <input type="submit" value="SEND" class="btn">
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="circle">
+        <div class="container">
+           <div class="circle1">
+            <a href="https://www.linkedin.com/in/xiauthong-chan-05a014294/" title="Linknd" target="_blank" class="iconn"><i class="fa-brands fa-linkedin"></i></a>
+           </div>
+           <div class="circle1">
+            <a href="https://github.com/xiauthong" title="Github" target="_blank" class="iconn"><i class="fa-brands fa-github"></i></a>
+           </div>
+           <div class="circle1">
+            <a href="https://wa.me/60166349867" title="Whatsapp" target="_blank" class="iconn"><i class="fa-brands fa-whatsapp"></i></a>
+           </div>
+           <div class="circle1">
+            <a href="https://mail.google.com/chanxiauthong0126@gmail.com" title="Gmail" target="_blank" class="iconn"><i class="fa-regular fa-envelope"></i></a>
+           </div>
+           <div class="circle1">
+            <a href="https://drive.google.com/file/d/19xSoUf7E0tZVnBuuEfstj6tRRhgOxfJX/view?usp=share_link" title="Download" target="_blank" class="iconn"><i class="fa-solid fa-download"></i></a>
+           </div>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav(){
+            document.getElementById("mySidenav").style.width="250px";
+        }
+        function closeNav(){
+            document.getElementById("mySidenav").style.width="0";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+    // ... (previous code)
+
+    // Function to handle the hover effect on skill bars
+    function handleSkillHover(skill) {
+      const skillElement = document.querySelector(`.${skill}`);
+      skillElement.addEventListener("mouseover", function () {
+        skillElement.style.transform = "scale(1.3)";
+      });
+
+      skillElement.addEventListener("mouseout", function () {
+        skillElement.style.transform = "scale(1.0)";
+      });
+    }
+
+    // Apply the hover effect to each skill bar
+    const skills = ["html", "css", "javascript", "php"];
+    skills.forEach(handleSkillHover);
+  });
+
+        
+    </script>
+
+
+
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
